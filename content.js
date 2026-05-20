@@ -98,7 +98,7 @@ function processTextNodes(element) {
 }
 
 function processTextNode(node) {
-  if (!node.nodeValue) return;
+  if (!node.nodeValue || !node.parentNode) return;
   // If parent is already our wrapper, ignore
   if (node.parentElement && node.parentElement.classList.contains('price-converter-wrapper')) return;
 
@@ -137,6 +137,8 @@ function wrapPrice(textNode, match, regexUsed) {
   const postText = document.createTextNode(text.substring(matchIndex + priceString.length));
 
   const parent = textNode.parentNode;
+  if (!parent) return;
+
   parent.insertBefore(preText, textNode);
   parent.insertBefore(wrapper, textNode);
   parent.insertBefore(postText, textNode);
