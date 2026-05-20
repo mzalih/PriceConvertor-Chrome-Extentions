@@ -1,0 +1,30 @@
+.price-converter-wrapper {
+  border-bottom: 1px dotted #3b82f6;
+  cursor: help;
+  position: relative;
+  background-color: rgba(59, 130, 246, 0.1);
+  border-radius: 2px;
+  padding: 0 2px;
+  transition: background-color 0.2s;
+}
+
+.price-converter-wrapper:hover {
+  background-color: rgba(59, 130, 246, 0.2);
+}
+
+.price-converter-tooltip {
+  position: absolute;
+  background-color: #1e293b;
+  color: #f8fafc;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  z-index: 2147483647; /* Max z-index */
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  white-space: nowrap;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Price Converter</h2>
+    <div class="form-group" style="display: flex; align-items: center; gap: 8px; margin-top: 0; padding-bottom: 12px; border-bottom: 1px solid #e2e8f0;">
+      <input type="checkbox" id="enableConversion" />
+      <label for="enableConversion" style="margin-bottom: 0; font-weight: 600; color: #0f172a;">Enable Conversion</label>
+    </div>
+    <div class="form-group">
+      <label for="sourceCurrency">Source Currency (Prices on page):</label>
+      <select id="sourceCurrency">
+        <option value="usd">US Dollar (USD)</option>
+        <option value="eur">Euro (EUR)</option>
+        <option value="gbp">British Pound (GBP)</option>
+        <option value="inr">Indian Rupee (INR)</option>
+        <option value="cad">Canadian Dollar (CAD)</option>
+        <option value="aud">Australian Dollar (AUD)</option>
+        <option value="sgd">Singapore Dollar (SGD)</option>
+        <option value="aed">UAE Dirham (AED)</option>
+        <option value="kwd">Kuwaiti Dinar (KWD)</option>
+        <option value="sar">Saudi Riyal (SAR)</option>
+        <option value="qar">Qatari Riyal (QAR)</option>
+        <option value="omr">Omani Rial (OMR)</option>
+        <option value="bhd">Bahraini Dinar (BHD)</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="currency">Target Currency (Show in tooltip):</label>
+      <select id="currency">
+        <option value="inr">Indian Rupee (INR)</option>
+        <option value="eur">Euro (EUR)</option>
+        <option value="gbp">British Pound (GBP)</option>
+        <option value="jpy">Japanese Yen (JPY)</option>
+        <option value="cad">Canadian Dollar (CAD)</option>
+        <option value="aud">Australian Dollar (AUD)</option>
+        <option value="sgd">Singapore Dollar (SGD)</option>
+        <option value="aed">UAE Dirham (AED)</option>
+        <option value="kwd">Kuwaiti Dinar (KWD)</option>
+        <option value="sar">Saudi Riyal (SAR)</option>
+        <option value="qar">Qatari Riyal (QAR)</option>
+        <option value="omr">Omani Rial (OMR)</option>
+        <option value="bhd">Bahraini Dinar (BHD)</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="conversionMode">Conversion Mode:</label>
+      <select id="conversionMode">
+        <option value="selection">On Selection (Default)</option>
+        <option value="hover_smart">On Hover (Smart Context)</option>
+        <option value="hover_all">On Hover (Aggressive)</option>
+      </select>
+    </div>
+    <div id="status"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
